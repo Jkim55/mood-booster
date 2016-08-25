@@ -1,3 +1,6 @@
+"use strict"
+
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -8,6 +11,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var port = process.env.PORT
 var app = express();
 
 // view engine setup
@@ -56,5 +60,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(Number(port). () => {
+console.log('Server is running on port', port);
+});
 
 module.exports = app;
