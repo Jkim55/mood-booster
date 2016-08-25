@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(Number(port). () => {
+app.listen(Number(port), () => {
 console.log('Server is running on port', port);
 });
 
